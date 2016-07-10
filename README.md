@@ -5,7 +5,11 @@ Handles right mouse button clicks to open the Angular UI Bootstrap Dropdown as a
 
 Usage
 -----
-First include your script
+First Download or clone repo or get from npm with
+```
+ npm install uib-context-menu
+```
+Then include your script
 ```
 <script src="dist/ngContextMenu.js"></script>
 ```
@@ -29,8 +33,8 @@ and using them is as easy as placing the ```context=""``` directive in any eleme
   <p>div as a button with context menu</p>
 </div>
 ```
-There is also an optional ```context-callback=""``` directive that allows you to execute a function before opening the popup.
-In your controller define a scope function
+if you want to execute a function before opening the popup simply bind to the focus event using ng-focus since it executes before contextmenu event.
+To do so, create a function in you controller
 ```
 $scope.myCallback = function(){
  console.log("callback");
@@ -38,7 +42,7 @@ $scope.myCallback = function(){
 ```
 and place it in the same element as the context directive
 ```
-<div context="context1" context-callback="myCallback()" role="button">
+<div context="context1" ng-focus="myCallback()" role="button">
   <p>div as a button with context menu</p>
 </div>
 ```
