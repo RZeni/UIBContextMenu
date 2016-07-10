@@ -1,0 +1,28 @@
+{
+  "name": "ng-context-menu",
+  "version": "1.0.0",
+  "description": "An Angular UI Bootstrap dropdown extrension for custom context menus",
+  "main": "ngContextMenu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RZeni/ngContextMenu.git"
+  },
+  "keywords": [
+    "Context",
+    "Menu",
+    "context",
+    "menu",
+    "UIB",
+    "Angular",
+    "angular"
+  ],
+  "author": "Robert Zeni <rzeni@live.com> (robertzeni.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RZeni/ngContextMenu/issues"
+  },
+  "homepage": "https://github.com/RZeni/ngContextMenu#readme"
+}
