@@ -5,7 +5,11 @@ Handles right mouse button clicks to open the Angular UI Bootstrap Dropdown as a
 
 Usage
 -----
-First include your script
+First Download or clone repo or get from npm with
+```
+ npm install uib-context-menu
+```
+Then include your script
 ```
 <script src="dist/ngContextMenu.js"></script>
 ```
