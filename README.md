@@ -22,9 +22,23 @@ Create a custom context menu in your DOM
    <li><a ng-click="">Delete</a></li>
  </ul>
 ```
-You can create multiple context menus, to use them place the directive in any element and reference the is of the desired menu
+You can create multiple context menus,
+and using them is as easy as placing the ```context=""``` directive in any element and pointing to the ID of the desired menu
 ```
 <div context="context1" role="button">
+  <p>div as a button with context menu</p>
+</div>
+```
+There is also an optional ```context-callback=""``` directive that allows you to execute a function before opening the popup.
+In your controller define a scope function
+```
+$scope.myCallback = function(){
+ console.log("callback");
+}
+```
+and place it in the same element as the context directive
+```
+<div context="context1" context-callback="myCallback()" role="button">
   <p>div as a button with context menu</p>
 </div>
 ```
