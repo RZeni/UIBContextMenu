@@ -33,16 +33,15 @@ and using them is as easy as placing the ```context=""``` directive in any eleme
   <p>div as a button with context menu</p>
 </div>
 ```
-if you want to execute a function before opening the popup simply bind to the focus event using ng-focus since it executes before contextmenu event.
-To do so, create a function in you controller
+if you want to execute a function before opening the popup simply create the function in your controller
 ```
 $scope.myCallback = function(){
  console.log("callback");
 }
 ```
-and place it in the same element as the context directive
+and use the optional ```callback=""``` directive by placing it in the same element as the context directive
 ```
-<div context="context1" ng-focus="myCallback()" role="button">
+<div context="context1" callback="myCallback()" role="button">
   <p>div as a button with context menu</p>
 </div>
 ```
