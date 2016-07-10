@@ -1,0 +1,27 @@
+{
+  "name": "uib-context-menu",
+  "description": "An Angular UI Bootstrap dropdown extrension for custom context menus",
+  "main": "ngContextMenu.js",
+  "authors": [
+    "Robert Zeni <rzeni@live.com> (robertzeni.com)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Context",
+    "Menu",
+    "context",
+    "menu",
+    "UIB",
+    "Angular",
+    "angular"
+  ],
+  "homepage": "https://github.com/RZeni/ngContextMenu",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
