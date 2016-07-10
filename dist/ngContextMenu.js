@@ -1,26 +1,24 @@
 (function(angular) {
-  var ngContextMenu = angular.module('ngContextMenu', []);
+  var ngContextMenu = angular.module('ngContextMenu', ['ui.bootstrap']);
 
   ngContextMenu.directive('context', [function($timeout) {
     var contextMenus = [];
     return {
       restrict: 'A',
       scope: '@&',
+      attrs: {
+        callback: '&'
+      },
       link: function compile(scope, iElement, iAttrs) {
-        //handle callback
-        iAttrs.$observe("context-callback", function (val) {
-          if (val) {
-            console.log(val);
-            iElement.attr( val); // whatever you want to do
-          }
-        });
-
         var ul = document.getElementById(iAttrs.context),
           last = null;
 
         ul.style.display = 'none';
 
         angular.element(iElement).bind('contextmenu', function(event) {
+          if(iAttrs.callback)
+            scope.$apply(iAttrs.callback);
+
           if(contextMenus.length > 0){
             contextMenus[0].style.display = "none";
             contextMenus.pop();
@@ -32,7 +30,7 @@
           event.stopPropagation();
           event.stopImmediatePropagation();
 
-          var left = event.clientX - 50;
+          var left = event.clientX;
           var top = event.clientY;
           var menuHeight = angular.element(ul)[0].offsetHeight;
           var menuWidth = angular.element(ul)[0].offsetWidth;
@@ -50,7 +48,6 @@
           last = event.timeStamp;
 
           contextMenus.push(ul);
-          console.log(contextMenus);
           return false;
         });
 
