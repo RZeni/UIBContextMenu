@@ -1,7 +1,7 @@
 (function(angular) {
-  var ngContextMenu = angular.module('ngContextMenu', ['ui.bootstrap']);
+  var uibContextMenu = angular.module('uib-context-menu', ['ui.bootstrap']);
 
-  ngContextMenu.directive('context', [function($timeout) {
+  uibContextMenu.directive('context', [function($timeout) {
     var contextMenus = [];
     return {
       restrict: 'A',
