@@ -2,12 +2,14 @@ ngContextMenu
 ================
 
 Handles right mouse button clicks to open the Angular UI Bootstrap Dropdown as a custom context menu.
+
 -----
 ## Dependencies
 https://angular-ui.github.io/bootstrap/
 -at minimum the dropdown module
+
 -----
-## Download and Include
+## Download/Include
 First Download/Clone the repo or get it from npm/bower with
 ```
  npm install uib-context-menu
@@ -26,6 +28,7 @@ Next Inject module into your app
 var app = angular.module('myApp', ['uib-context-menu']);
 
 ```
+
 -----
 ## Create a Context Menu
 Creating a custom context menu in your DOM
@@ -36,6 +39,7 @@ Creating a custom context menu in your DOM
    <li><a ng-click="">Delete</a></li>
  </ul>
 ```
+
 -----
 ## Create multiple context menus
 and using them is as easy as placing the ```context=""``` directive in any element and pointing to the ID of the desired menu
@@ -44,6 +48,7 @@ and using them is as easy as placing the ```context=""``` directive in any eleme
   <p>div as a button with context menu</p>
 </div>
 ```
+
 -----
 ## Callback prior to opening
 if you want to execute a function before opening the popup simply create the function in your controller
@@ -58,10 +63,12 @@ and use the optional ```callback=""``` directive by placing it in the same eleme
   <p>div as a button with context menu</p>
 </div>
 ```
+
 -----
-##Demo
+## Demo
 http://plnkr.co/edit/Gc7MRE?p=info
+
 -----
-Similar repos
+### Similar repos
 - https://github.com/ianwalter/ng-context-menu
 - https://github.com/Templarian/ui.bootstrap.contextMenu
