@@ -1,4 +1,4 @@
-ngContextMenu
+UIBContextMenu
 ================
 
 Handles right mouse button clicks to open the Angular UI Bootstrap Dropdown as a custom context menu.
